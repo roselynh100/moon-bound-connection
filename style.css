@@ -1,0 +1,120 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 100px;
+    font-family: sans-serif;
+    flex: 1;
+    background: linear-gradient(#5D5861, #1E040A);
+    z-index: 1;
+}
+
+img {
+    filter: drop-shadow(0px 0px 50px #000000);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 auto;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+    background-color: #000000;
+    border: 3px solid black;
+    padding: 14px 30px;
+}
+
+.playlists {
+    font-weight: bold;
+    line-height: 175%;
+    color: #9A9A9A;
+}
+
+#now_playing {
+    color: #ffffff;
+}
+
+.main {
+    width: 60%;
+    height: 150vh;
+    margin: 5% 0% 0% 28%;
+}
+
+#Thunder78 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 15px 45px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 100px;
+    background: #000000;
+}
+
+.titles {
+    float: left;
+    padding-left: 50px;
+    font-size: 15px;
+    color: #ffffff;
+    margin-top: 90px;
+    line-height: 0px;
+}
+
+#playlistIcon {
+    float: left;
+    width: 15rem;
+}
+
+#playlistTitle {
+    float: left;
+    padding-left: 50px;
+    line-height: 0px;
+    font-size: 45px;
+    color: #ffffff;
+}
+
+#playlistBio {
+    float: left;
+    padding-left: 50px;
+    color: #9A9A9A;
+    margin-top: 0px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+#cat {
+    width: 2rem;
+    padding: 0px 10px 0px 0px;
+}
+
+.footer {
+    background: #1B1B1B;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+#footerType {
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 5px 10px 114px;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+#footerIcon {
+    padding: 17px 0px 2px 15px;
+    width: 4rem;
+    float: left;
+}
