@@ -31,10 +31,19 @@ img {
     padding: 14px 30px;
 }
 
+.settings {
+    color: #9A9A9A;
+    font-weight: bold;
+    line-height: 175%;
+    margin-left: 50px;
+}
+
 .playlists {
+    font-size: 14px;
     font-weight: bold;
     line-height: 175%;
     color: #9A9A9A;
+    margin-top: 25px;
 }
 
 #now_playing {
@@ -90,6 +99,10 @@ img {
     margin-top: 0px;
     font-weight: bold;
     line-height: 35px;
+}
+
+#songIcon {
+    width: 5%;
 }
 
 #cat {
