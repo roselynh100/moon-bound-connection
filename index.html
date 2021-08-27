@@ -5,201 +5,224 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon-Bound Connection</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="learning_vue.css">
+    <script src="https://unpkg.com/vue@3.0.2"></script>
 </head>
 <body>
-    <div class="sidebar">
-        <img src="https://i.ibb.co/dD2vSjT/unknown-1.png" id="topSettings">
-        <div class="settings">
-            <div class="setting">
-                <img src="https://i.ibb.co/n8y4Tzq/unknown-1.png" class="settingIcon1">
-                <p>Home</p>
+    <div id="everything">
+        <div class="sidebar">
+            <img src="https://i.ibb.co/dD2vSjT/unknown-1.png" id="topSettings">
+            <div class="settings">
+                <div class="setting">
+                    <img src="https://i.ibb.co/n8y4Tzq/unknown-1.png" class="settingIcon1">
+                    <p>Home</p>
+                </div>
+                <div class="setting">
+                    <img src="https://i.ibb.co/Qf0NdNg/unknown-1.png" class="settingIcon1">
+                    <p>Search</p>
+                </div>
+                <div class="setting">
+                    <img src="https://i.ibb.co/ncjbqpc/unknown-1.png" class="settingIcon1">
+                    <p>Your Library</p>
+                </div>
+                <div class="setting">
+                    <img src="https://i.ibb.co/sbqTBDX/unknown-1.png" class="settingIcon2">
+                    <p>Create Playlist</p>
+                </div>
+                <div class="setting">
+                    <img src="https://i.ibb.co/TBM2TyN/unknown-1.png" class="settingIcon2">
+                    <p>Liked Songs</p>
+                </div>
             </div>
-            <div class="setting">
-                <img src="https://i.ibb.co/Qf0NdNg/unknown-1.png" class="settingIcon1">
-                <p>Search</p>
-            </div>
-            <div class="setting">
-                <img src="https://i.ibb.co/ncjbqpc/unknown-1.png" class="settingIcon1">
-                <p>Your Library</p>
-            </div>
-            <div class="setting">
-                <img src="https://i.ibb.co/sbqTBDX/unknown-1.png" class="settingIcon2">
-                <p>Create Playlist</p>
-            </div>
-            <div class="setting">
-                <img src="https://i.ibb.co/TBM2TyN/unknown-1.png" class="settingIcon2">
-                <p>Liked Songs</p>
+            <hr size="0.5" noshade color="#363636">
+            <div class="playlists">
+                <p>songs that remind me of chili 🙄</p>
+                <p>stalking playlist</p>
+                <p id="now_playing" v-show="showPlaylist">moon-bound connection</p>
+                <p v-show="showSong" @click="playSong">moon-bound connection</p>
+                <p onclick="location.href='https://open.spotify.com/playlist/3gCSs0cZilmq23kuKd71OQ?si=b59dde3b5e804fcc';">the band kid life</p>
+                <p onclick="location.href='https://open.spotify.com/playlist/0BPIIt13M3SPrw508lJkCq?si=70c3e8c909594eae';">oh to be young and in love</p>
+                <p onclick="location.href='https://open.spotify.com/playlist/3kYgyPagBnv1hXcQsX0b78?si=32e241c523d54cbd';">i'm not a weeb i swear</p>
+                <p>wowow sparkly fuzzy uwuwu</p>
+                <p onclick="location.href='https://open.spotify.com/playlist/66VbPvZOYblkG0Xw0ivahI?si=5ef587570a7b4964';">hey comrade!</p>
+                <p>何もきかないで</p>
+                <p>i'll be the main antagonist</p>
+                <p>POV you don't like romance...</p>
+                <p>stack it like tetris</p>
+                <p>running in an open field at dead hours</p>
             </div>
         </div>
-        <hr size="0.5" noshade color="#363636">
-        <div class="playlists">
-            <p>songs that remind me of chili 🙄</p>
-            <p>stalking playlist</p>
-            <p id="now_playing">moon-bound connection</p>
-            <p onclick="location.href='https://open.spotify.com/playlist/3gCSs0cZilmq23kuKd71OQ?si=b59dde3b5e804fcc';" style="cursor: pointer;">the band kid life</p>
-            <p onclick="location.href='https://open.spotify.com/playlist/0BPIIt13M3SPrw508lJkCq?si=70c3e8c909594eae';" style="cursor: pointer;">oh to be young and in love</p>
-            <p onclick="location.href='https://open.spotify.com/playlist/3kYgyPagBnv1hXcQsX0b78?si=32e241c523d54cbd';" style="cursor: pointer;">i'm not a weeb i swear</p>
-            <p>wowow sparkly fuzzy uwuwu</p>
-            <p>dark rooms & neon lights</p>
-            <p>何もきかないで</p>
-            <p>i'll be the main antagonist</p>
-            <p>POV you don't like romance...</p>
-            <p>stack it like tetris</p>
-            <p>running in an open field at dead hours</p>
-        </div>
-    </div>
-    <div class="main">
-        <div class="thunder78">
-            <img src="https://i.ibb.co/zGKZV0t/unknown-1.png">
-            <a href="./about.html">Thunder 78</a>
-        </div>
-        <div class="top">
-            <img src="https://cdn.discordapp.com/attachments/855278438574456842/862894334218076200/moon.png" id="playlistIcon">
-            <h3 class="titles">COLLABORATIVE PLAYLIST</h3>
-            <h1 id="playlistTitle">moon-bound connection</h1>
-            <p id="playlistBio">seventy-eight.<br><img src="https://media.discordapp.net/attachments/855278438574456842/864954519053008938/unknown.png" id="cat">707 likes ● 22 songs, 1 hr 30 min</p>
-        </div>
-    </div>
-    <div class="playButtons">
-        <img src="https://i.ibb.co/qY81p1y/green-play.png" id="greenPlay">
-        <img src="https://i.ibb.co/h7ZWFr3/unknown-1.png" id="download">
-        <img src="https://i.ibb.co/dJwwnx4/unknown-1.png" id="ellipses">
-        <img src="https://i.ibb.co/cr6W8mq/unknown-1.png" id="magnifyingGlass">
-        <p id="customOrder">Custom order</p>
-        <img src="https://i.ibb.co/sR5j0rq/unknown-1.png" id="triangle">
-    </div>
-    <div class="infoCategories">
-        <h2 id="number">#</h2>
-        <h2 id="title">TITLE</h2>
-        <h2 id="album">ALBUM</h2>
-        <h2 id="dateAdded">DATE ADDED</h2>
-    </div>
-    <div class="divider">
-        <hr size="0.5" noshade color="#C4C4C4">
-    </div>
-    <div class="songs">
-        <div class="song" onclick="location.href='./city127.html';" style="cursor: pointer;">
-            <h1>1</h1>
-            <img src="https://upload.wikimedia.org/wikipedia/id/2/23/NCT_127_Regular_Irregular_cover.jpg" class="songIcon">
-            <div class="songInfo">
-                <h2>City 127</h2>
-                <p>NCT 127</p>
+        <div class="main">
+            <div class="thunder78" @click="about">
+                <img src="https://i.ibb.co/zGKZV0t/unknown-1.png">
+                <p>Thunder 78</p>
             </div>
-            <h2 class="album">NCT #127 Regular-Irregular - Th...</h2>
-            <h2 class="date">Nov 5, 2021</h2>
-            <h2 class="time">3:19</h2>
-        </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1>2</h1>
-            <img src="https://th.bing.com/th/id/OIP.DsvJ8-Wx2nvNodptEp1MiwHaHa?pid=ImgDet&rs=1" class="songIcon">
-            <div class="songInfo">
-                <h2>Still Into You</h2>
-                <p>Paramore</p>
+            <div class="top">
+                <img src="https://cdn.discordapp.com/attachments/855278438574456842/862894334218076200/moon.png" id="playlistIcon">
+                <h3 class="titles">COLLABORATIVE PLAYLIST</h3>
+                <h1 id="playlistTitle">moon-bound connection</h1>
+                <p id="playlistBio">seventy-eight.<br><img src="https://media.discordapp.net/attachments/855278438574456842/864954519053008938/unknown.png" id="cat">707 likes ● 22 songs, 1 hr 30 min</p>
             </div>
-            <h2 class="album">Paramore</h2>
-            <h2 class="date">Nov 5, 2021</h2>
-            <h2 class="time">3:36</h2>
         </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1><img src="https://i.ibb.co/w7n9GMD/unknown-1.png" id="greenBars"></h1>
-            <img src="https://th.bing.com/th/id/OIP.jAFXWEgv-gOnmhlatVnZ6gHaHa?pid=ImgDet&rs=1" class="songIcon">
-            <div class="songInfo">
-                <h2 id="nowPlayingGreen">Come Inside Of My Heart</h2>
+            <div v-show="showPlaylist">
+                <div class="playButtons">
+                    <img src="https://i.ibb.co/qY81p1y/green-play.png" id="greenPlay">
+                    <img src="https://i.ibb.co/h7ZWFr3/unknown-1.png" id="download">
+                    <img src="https://i.ibb.co/dJwwnx4/unknown-1.png" id="ellipses">
+                    <img src="https://i.ibb.co/cr6W8mq/unknown-1.png" id="magnifyingGlass">
+                    <p id="customOrder">Custom order</p>
+                    <img src="https://i.ibb.co/sR5j0rq/unknown-1.png" id="triangle">
+                </div>
+                <div class="infoCategories">
+                    <h2 id="number">#</h2>
+                    <h2 id="title">TITLE</h2>
+                    <h2 id="album">ALBUM</h2>
+                    <h2 id="dateAdded">DATE ADDED</h2>
+                </div>
+                <div class="divider">
+                    <hr size="0.5" noshade color="#C4C4C4">
+                </div>
+                <div class="songs">
+                    <div class="song" @click="city127">
+                        <h1>1</h1>
+                        <img src="https://upload.wikimedia.org/wikipedia/id/2/23/NCT_127_Regular_Irregular_cover.jpg" class="songIcon">
+                        <div class="songInfo">
+                            <h2>City 127</h2>
+                            <p>NCT 127</p>
+                        </div>
+                        <h2 class="album">NCT #127 Regular-Irregular - Th...</h2>
+                        <h2 class="date">Nov 5, 2021</h2>
+                        <h2 class="time">3:19</h2>
+                    </div>
+                    <div class="song" @click="stillintoyou">
+                        <h1>2</h1>
+                        <img src="https://th.bing.com/th/id/OIP.DsvJ8-Wx2nvNodptEp1MiwHaHa?pid=ImgDet&rs=1" class="songIcon">
+                        <div class="songInfo">
+                            <h2>Still Into You</h2>
+                            <p>Paramore</p>
+                        </div>
+                        <h2 class="album">Paramore</h2>
+                        <h2 class="date">Nov 5, 2021</h2>
+                        <h2 class="time">3:36</h2>
+                    </div>
+                    <div class="song" @click="comeinsideofmyheart">
+                        <h1><img src="https://i.ibb.co/w7n9GMD/unknown-1.png" id="greenBars"></h1>
+                        <img src="https://th.bing.com/th/id/OIP.jAFXWEgv-gOnmhlatVnZ6gHaHa?pid=ImgDet&rs=1" class="songIcon">
+                        <div class="songInfo">
+                            <h2 id="nowPlayingGreen">Come Inside Of My Heart</h2>
+                            <p>IV Of Spades</p>
+                        </div>
+                        <h2 class="album">CLAPCLAPCLAP!</h2>
+                        <h2 class="date">Nov 5, 2021</h2>
+                        <h2 class="time">4:06</h2>
+                    </div>
+                    <div class="song" @click="style">
+                        <h1>4</h1>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png" class="songIcon">
+                        <div class="songInfo">
+                            <h2>Style</h2>
+                            <p>Taylor Swift</p>
+                        </div>
+                        <h2 class="album">1989</h2>
+                        <h2 class="date">Nov 5, 2021</h2>
+                        <h2 class="time">3:51</h2>
+                    </div>
+                    <div class="song" @click="dontstopbelievin">
+                        <h1>5</h1>
+                        <img src="https://e.snmc.io/i/600/s/2cd1bd449db87730d03c9da3f898d202/6696239" class="songIcon">
+                        <div class="songInfo">
+                            <h2>Don't Stop Believin'</h2>
+                            <p>Journey</p>
+                        </div>
+                        <h2 class="album">Escape</h2>
+                        <h2 class="date">Jan 27, 2021</h2>
+                        <h2 class="time">4:11</h2>
+                    </div>
+                    <div class="song" @click="spacegirl">
+                        <h1>6</h1>
+                        <img src="https://i.scdn.co/image/ab67616d0000b273fea1040061a463e6d7f30596" class="songIcon">
+                        <div class="songInfo">
+                            <h2>space girl</h2>
+                            <p>Frances Forever</p>
+                        </div>
+                        <h2 class="album">space girl</h2>
+                        <h2 class="date">Nov 5, 2021</h2>
+                        <h2 class="time">3:51</h2>
+                    </div>
+                    <div class="song" @click="frenzy">
+                        <h1>7</h1>
+                        <img src="https://i.scdn.co/image/ab67616d0000b27315daf7a2163f5f021204f136" class="songIcon">
+                        <div class="songInfo">
+                            <h2>Frenzy</h2>
+                            <p>Andrew Boysen, Jr., University...</p>
+                        </div>
+                        <h2 class="album">The Music of Andrew Boysen Jr.</h2>
+                        <h2 class="date">Nov 5, 2021</h2>
+                        <h2 class="time">8:30</h2>
+                    </div>
+                    <div class="song" onclick="location.href='#';" style="cursor: pointer;">
+                        <h1>8</h1>
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/c/cf/RBD_-_Rebels.jpg" class="songIcon">
+                        <div class="songInfo">
+                            <h2>Connected</h2>
+                            <p>RBD, Anahí, Dulce María, Maite...</p>
+                        </div>
+                        <h2 class="album">Rebels</h2>
+                        <h2 class="date">Jan 27, 2021</h2>
+                        <h2 class="time">3:18</h2>
+                    </div>
+                    <div class="song" onclick="location.href='#';" style="cursor: pointer;">
+                        <h1>9</h1>
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/51z8wUzeI5L._AC_SX355_.jpg" class="songIcon">
+                        <div class="songInfo">
+                            <h2>Bright</h2>
+                            <p>Echosmith</p>
+                        </div>
+                        <h2 class="album">Talking Dreams (Deluxe Edition)</h2>
+                        <h2 class="date">Jan 27, 2021</h2>
+                        <h2 class="time">3:41</h2>
+                    </div>
+                    <div class="song" onclick="location.href='#';" style="cursor: pointer;">
+                        <h1>10</h1>
+                        <img src="https://unfspinnaker.com/wp-content/uploads/2021/03/montgomery.jpg" class="songIcon">
+                        <div class="songInfo">
+                            <h2>Line Without a Hook</h2>
+                            <p>Ricky Montgomery</p>
+                        </div>
+                        <h2 class="album">Montgomery Ricky</h2>
+                        <h2 class="date">Nov 5, 2021</h2>
+                        <h2 class="time">4:10</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="profiles">
+                <div class="profile" v-show="showSong">
+                    <div class="profileHeader">
+                        <img src="https://i.ibb.co/HG4qYN3/f64b6d30a8fb23e641dd99ca93a04de7-1-Cropped.jpg" id="profileIcon">
+                        <h3 id="profileName">{{ name1 }}</h3>
+                    </div>
+                    <p id="profileText">{{ desc1 }}</p>
+                </div>
+                <div class="profile" v-show="showSong">
+                    <div class="profileHeader">
+                        <img src="https://i.ibb.co/1MQckHv/b4e7e90189df86100c65e82b972998b2-1-Cropped.jpg" id="profileIcon">
+                        <h3 id="profileName">{{ name2 }}</h3>    
+                    </div>
+                    <p id="profileText">{{ desc2 }}</p>
+                </div>
+            </div>    
+        </div>
+        <div class="footer">
+            <img src="https://media.discordapp.net/attachments/855278438574456842/864921418142580776/unknown.png" id="footerIcon">
+            <div class="footerType">
+                <h3>Come Inside Of My Heart</h3>
                 <p>IV Of Spades</p>
             </div>
-            <h2 class="album">CLAPCLAPCLAP!</h2>
-            <h2 class="date">Nov 5, 2021</h2>
-            <h2 class="time">4:06</h2>
-        </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1>4</h1>
-            <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Taylor_Swift_-_1989.png" class="songIcon">
-            <div class="songInfo">
-                <h2>Style</h2>
-                <p>Taylor Swift</p>
-            </div>
-            <h2 class="album">1989</h2>
-            <h2 class="date">Nov 5, 2021</h2>
-            <h2 class="time">3:51</h2>
-        </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1>5</h1>
-            <img src="https://e.snmc.io/i/600/s/2cd1bd449db87730d03c9da3f898d202/6696239" class="songIcon">
-            <div class="songInfo">
-                <h2>Don't Stop Believin'</h2>
-                <p>Journey</p>
-            </div>
-            <h2 class="album">Escape</h2>
-            <h2 class="date">Jan 27, 2021</h2>
-            <h2 class="time">4:11</h2>
-        </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1>6</h1>
-            <img src="https://i.scdn.co/image/ab67616d0000b273fea1040061a463e6d7f30596" class="songIcon">
-            <div class="songInfo">
-                <h2>space girl</h2>
-                <p>Frances Forever</p>
-            </div>
-            <h2 class="album">space girl</h2>
-            <h2 class="date">Nov 5, 2021</h2>
-            <h2 class="time">3:51</h2>
-        </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1>7</h1>
-            <img src="https://i.scdn.co/image/ab67616d0000b27315daf7a2163f5f021204f136" class="songIcon">
-            <div class="songInfo">
-                <h2>Frenzy</h2>
-                <p>Andrew Boysen, Jr., University...</p>
-            </div>
-            <h2 class="album">The Music of Andrew Boysen Jr.</h2>
-            <h2 class="date">Nov 5, 2021</h2>
-            <h2 class="time">8:30</h2>
-        </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1>8</h1>
-            <img src="https://upload.wikimedia.org/wikipedia/pt/c/cf/RBD_-_Rebels.jpg" class="songIcon">
-            <div class="songInfo">
-                <h2>Connected</h2>
-                <p>RBD, Anahí, Dulce María, Maite...</p>
-            </div>
-            <h2 class="album">Rebels</h2>
-            <h2 class="date">Jan 27, 2021</h2>
-            <h2 class="time">3:18</h2>
-        </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1>9</h1>
-            <img src="https://images-na.ssl-images-amazon.com/images/I/51z8wUzeI5L._AC_SX355_.jpg" class="songIcon">
-            <div class="songInfo">
-                <h2>Bright</h2>
-                <p>Echosmith</p>
-            </div>
-            <h2 class="album">Talking Dreams (Deluxe Edition)</h2>
-            <h2 class="date">Jan 27, 2021</h2>
-            <h2 class="time">3:41</h2>
-        </div>
-        <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-            <h1>10</h1>
-            <img src="https://unfspinnaker.com/wp-content/uploads/2021/03/montgomery.jpg" class="songIcon">
-            <div class="songInfo">
-                <h2>Line Without a Hook</h2>
-                <p>Ricky Montgomery</p>
-            </div>
-            <h2 class="album">Montgomery Ricky</h2>
-            <h2 class="date">Nov 5, 2021</h2>
-            <h2 class="time">4:10</h2>
+            <img src="https://i.ibb.co/mcs4NwK/unknown-1.png" id="heart">
+            <img src="https://i.ibb.co/NV0V7c9/unknown-1.png" id="progressBar">
+            <img src="https://i.ibb.co/q9qc55j/unknown-1.png" id="volume">
         </div>
     </div>
-    <div class="footer">
-        <img src="https://media.discordapp.net/attachments/855278438574456842/864921418142580776/unknown.png" id="footerIcon">
-        <div class="footerType">
-            <h3>Come Inside Of My Heart</h3>
-            <p>IV Of Spades</p>
-        </div>
-        <img src="https://i.ibb.co/mcs4NwK/unknown-1.png" id="heart">
-        <img src="https://i.ibb.co/NV0V7c9/unknown-1.png" id="progressBar">
-        <img src="https://i.ibb.co/q9qc55j/unknown-1.png" id="volume">
-    </div>
-
+    <script src="app.js"></script>
 </body>
 </html>
