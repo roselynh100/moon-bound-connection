@@ -54,6 +54,7 @@ body {
 
 .playlists p {
     font-size: 14px;
+    cursor: pointer;
 }
 
 .playlists p:hover {
@@ -92,11 +93,11 @@ body {
 .thunder78:hover {
     background: #282828;
     border-color: #282828;
+    cursor: pointer;
 }
 
-.thunder78 a {
+.thunder78 p {
     font-size: 15px;
-    text-decoration: none;
     color: #ffffff;
 }
 
@@ -229,6 +230,7 @@ body {
     align-items: center;
     font-family: sans-serif;
     margin-right: 60px;
+    cursor: pointer;
 }
 
 .song:hover {
@@ -295,6 +297,50 @@ p {
 
 .time {
     margin-left: 935px;
+}
+
+
+
+/* playlist */
+
+#profiles {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 28%;
+    margin-right: 3rem;
+    margin-bottom: 150px;
+}
+
+.profile {
+    background-color: #1B1B1B;
+    width: 45%;
+    border-radius: 1.5rem;
+}
+
+.profileHeader {
+    display: flex;
+    align-items: center;
+}
+
+#profileIcon {
+    width: 10rem;
+    border-radius: 100%;
+    padding: 2rem;
+    filter: drop-shadow(0px 0px 50px #000000);
+}
+
+#profileName {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #ffffff;
+}
+
+#profileText {
+    padding: 0 2rem 1rem 2rem;
+    color: #9A9A9A;
+    font-size: 1.2rem;
+    text-indent: 50px;
+    text-justify: auto;
 }
 
 
