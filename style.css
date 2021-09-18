@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     background: linear-gradient(#5D5861, #1E040A);
+    max-height: 72rem;
 }
 
 
@@ -93,7 +94,6 @@ body {
 .thunder78:hover {
     background: #282828;
     border-color: #282828;
-    cursor: pointer;
 }
 
 .thunder78 p {
@@ -130,6 +130,23 @@ body {
 }
 
 #playlistBio {
+    float: left;
+    padding-left: 50px;
+    color: #9A9A9A;
+    margin-top: 0px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+#profileTitle {
+    float: left;
+    padding-left: 50px;
+    line-height: 0px;
+    font-size: 80px;
+    color: #ffffff;
+}
+
+#profileBio {
     float: left;
     padding-left: 50px;
     color: #9A9A9A;
@@ -301,7 +318,7 @@ p {
 
 
 
-/* playlist */
+/* playlist & titles */
 
 #profiles {
     display: flex;
@@ -341,6 +358,13 @@ p {
     font-size: 1.2rem;
     text-indent: 50px;
     text-justify: auto;
+}
+
+.followers {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-left: 28%;
+    padding-bottom: 2rem;
 }
 
 
