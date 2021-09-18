@@ -3,23 +3,30 @@ const app = Vue.createApp({
         return {
             showSong: false,
             showPlaylist: true,
+            showAbout: false,
+            header: "COLLABORATIVE PLAYLIST",
+            title: "moon-bound connection"
         }
     },
     methods: {
         playSong() {
             this.showSong = !this.showSong
             this.showPlaylist = !this.showPlaylist
+            this.showAbout = false
+            this.header = "COLLABORATIVE PLAYLIST"
         },
         about() {
             this.showSong = true
             this.showPlaylist = false
+            this.showAbout = true
+            this.header = "PROFILE"
             this.desc1 = 'something about liyun'
             this.desc2 = 'something about ehuang'
         },
         city127() {
             this.playSong()
-            this.desc1 = 'When I hear City 127, I always think of the first time I saw <strike>Mark Lee</strike> NCT 127 in person, during the NeoCity in Toronto concert. This is the perfect song for a walk in the park, or just chilling in the sun, or getting married to your Waifu (which is exactly what I plan to do). In fact, this song - to be played at our wedding - is what inspired this entire playlist. It’s so upbeat and cute and boppy; if I were walking while listening to this, then there’d be a skip in my step. <i>Neomu areumdawo,</i> they say, describing my Waifu so perfectly. <i>Now, our story</i> - a story we will create once we start our newly-wed life :sunglasses: When they say “my girl”, that would have to be George about me, because am gorl. Thank you.'
-            this.desc2 = 'It’s a wack city and the waifus are walking together, hands locked, but not looking at each other for a moment. Theres a sense of gravity holding them together but the youthful feeling of first love is still fresh. There’s energy all over toronto and so many possibilities to do together. The waifus have so much to reveal to each other, the stories that they have planned in their minds—the foods to eat, the things they want to buy together, the chickens they want to see, the waterfront they want to sit and watch together until they start fading into their own little world. George didn’t know a lot of korean, but assumed that <i>chigeum euri (????) iyagi</i> was a true representation of what the future holds. As they look towards the faint haze of city lights, and amidst their shiness of youthfulwaifulove, there is so much life they want to share with each other.'
+            this.desc1 = 'When I hear City 127, I always think of the first time I saw NCT 127 in person, during the NeoCity in Toronto concert. This is the perfect song for a walk in the park, or just chilling in the sun, or getting married to your Waifu (which is exactly what I plan to do). In fact, this song - to be played at our wedding - is what inspired this entire playlist. It’s so upbeat and cute and boppy; if I were walking while listening to this, then there’d be a skip in my step. Neomu areumdawo, they say, describing my Waifu so perfectly. Now, our story - a story we will create once we start our newly-wed life :sunglasses: When they say “my girl”, that would have to be George about me, because am gorl. Thank you.'
+            this.desc2 = 'It’s a wack city and the waifus are walking together, hands locked, but not looking at each other for a moment. Theres a sense of gravity holding them together but the youthful feeling of first love is still fresh. There’s energy all over toronto and so many possibilities to do together. The waifus have so much to reveal to each other, the stories that they have planned in their minds—the foods to eat, the things they want to buy together, the chickens they want to see, the waterfront they want to sit and watch together until they start fading into their own little world. George didn’t know a lot of korean, but assumed that chigeum euri (????) iyagi was a true representation of what the future holds. As they look towards the faint haze of city lights, and amidst their shiness of youthfulwaifulove, there is so much life they want to share with each other.'
         },
         stillintoyou() {
             this.playSong()
