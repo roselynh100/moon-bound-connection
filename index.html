@@ -49,19 +49,22 @@
                 <p>i'll be the main antagonist</p>
                 <p>POV you don't like romance...</p>
                 <p>stack it like tetris</p>
-                <p>running in an open field at dead hours</p>
+                <p>running in an open field at dead hours</ p>
             </div>
         </div>
         <div class="main">
-            <div class="thunder78" @click="about">
+            <div class="thunder78" >
                 <img src="https://i.ibb.co/zGKZV0t/unknown-1.png">
                 <p>Thunder 78</p>
             </div>
+            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/saxophone_1f3b7.png" id="profileIcon" v-show="showAbout">
             <div class="top">
-                <img src="https://cdn.discordapp.com/attachments/855278438574456842/862894334218076200/moon.png" id="playlistIcon">
-                <h3 class="titles">COLLABORATIVE PLAYLIST</h3>
-                <h1 id="playlistTitle">moon-bound connection</h1>
-                <p id="playlistBio">seventy-eight.<br><img src="https://media.discordapp.net/attachments/855278438574456842/864954519053008938/unknown.png" id="cat">707 likes ● 22 songs, 1 hr 30 min</p>
+                <img src="https://cdn.discordapp.com/attachments/855278438574456842/862894334218076200/moon.png" id="playlistIcon" v-show="!showAbout">
+                <h3 class="titles">{{ header }}</h3>
+                <h1 id="playlistTitle" v-show="!showAbout">moon-bound connection</h1>
+                <h1 id="profileTitle" v-show="showAbout">Thunder 78</h1>
+                <p id="playlistBio" v-show="!showAbout">seventy-eight.<br><img src="https://media.discordapp.net/attachments/855278438574456842/864954519053008938/unknown.png" id="cat">707 likes ● 22 songs, 1 hr 30 min</p>
+                <p id="profileBio" v-show="showAbout">14 Public Playlists ● <span style="color: white">888 Followers ● 78 Following</span></p>
             </div>
         </div>
             <div v-show="showPlaylist">
@@ -160,53 +163,21 @@
                         <h2 class="date">Nov 5, 2021</h2>
                         <h2 class="time">8:30</h2>
                     </div>
-                    <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-                        <h1>8</h1>
-                        <img src="https://upload.wikimedia.org/wikipedia/pt/c/cf/RBD_-_Rebels.jpg" class="songIcon">
-                        <div class="songInfo">
-                            <h2>Connected</h2>
-                            <p>RBD, Anahí, Dulce María, Maite...</p>
-                        </div>
-                        <h2 class="album">Rebels</h2>
-                        <h2 class="date">Jan 27, 2021</h2>
-                        <h2 class="time">3:18</h2>
-                    </div>
-                    <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-                        <h1>9</h1>
-                        <img src="https://images-na.ssl-images-amazon.com/images/I/51z8wUzeI5L._AC_SX355_.jpg" class="songIcon">
-                        <div class="songInfo">
-                            <h2>Bright</h2>
-                            <p>Echosmith</p>
-                        </div>
-                        <h2 class="album">Talking Dreams (Deluxe Edition)</h2>
-                        <h2 class="date">Jan 27, 2021</h2>
-                        <h2 class="time">3:41</h2>
-                    </div>
-                    <div class="song" onclick="location.href='#';" style="cursor: pointer;">
-                        <h1>10</h1>
-                        <img src="https://unfspinnaker.com/wp-content/uploads/2021/03/montgomery.jpg" class="songIcon">
-                        <div class="songInfo">
-                            <h2>Line Without a Hook</h2>
-                            <p>Ricky Montgomery</p>
-                        </div>
-                        <h2 class="album">Montgomery Ricky</h2>
-                        <h2 class="date">Nov 5, 2021</h2>
-                        <h2 class="time">4:10</h2>
-                    </div>
                 </div>
             </div>
+            <h2 class="followers" v-show="showAbout">Followers</h2>
             <div id="profiles">
                 <div class="profile" v-show="showSong">
                     <div class="profileHeader">
                         <img src="https://i.ibb.co/HG4qYN3/f64b6d30a8fb23e641dd99ca93a04de7-1-Cropped.jpg" id="profileIcon">
-                        <h3 id="profileName">{{ name1 }}</h3>
+                        <h3 id="profileName">RWAE!!</h3>
                     </div>
                     <p id="profileText">{{ desc1 }}</p>
                 </div>
                 <div class="profile" v-show="showSong">
                     <div class="profileHeader">
                         <img src="https://i.ibb.co/1MQckHv/b4e7e90189df86100c65e82b972998b2-1-Cropped.jpg" id="profileIcon">
-                        <h3 id="profileName">{{ name2 }}</h3>    
+                        <h3 id="profileName">Yierqi!!</h3>
                     </div>
                     <p id="profileText">{{ desc2 }}</p>
                 </div>
