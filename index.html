@@ -50,7 +50,7 @@
                 <p>i'll be the main antagonist</p>
                 <p>POV you don't like romance...</p>
                 <p>stack it like tetris</p>
-                <p>running in an open field at dead hours</ p>
+                <p>running in an open field at dead hours</p>
             </div>
         </div>
         <div class="main">
@@ -61,11 +61,13 @@
             <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/saxophone_1f3b7.png" id="profileIcon" v-show="showAbout">
             <div class="top">
                 <img src="https://cdn.discordapp.com/attachments/855278438574456842/862894334218076200/moon.png" id="playlistIcon" v-show="!showAbout">
-                <h3 class="titles">COLLABORATIVE PLAYLIST</h3>
-                <h1 id="playlistTitle" v-show="!showAbout">moon-bound connection</h1>
-                <h1 id="profileTitle" v-show="showAbout">Thunder 78</h1>
-                <p id="playlistBio" v-show="!showAbout">seventy-eight.<br><img src="https://media.discordapp.net/attachments/855278438574456842/864954519053008938/unknown.png" id="cat">707 likes ● 22 songs, 1 hr 30 min</p>
-                <p id="profileBio" v-show="showAbout">14 Public Playlists ● <span style="color: white">888 Followers ● 78 Following</span></p>
+                <div class="playlistInfo">
+                    <h3 class="titles">COLLABORATIVE PLAYLIST</h3>
+                    <h1 id="playlistTitle" v-show="!showAbout">moon-bound connection</h1>
+                    <h1 id="profileTitle" v-show="showAbout">Thunder 78</h1>
+                    <p id="playlistBio" v-show="!showAbout">seventy-eight.<br><img src="https://media.discordapp.net/attachments/855278438574456842/864954519053008938/unknown.png" id="cat">707 likes ● 22 songs, 1 hr 30 min</p>
+                    <p id="profileBio" v-show="showAbout">14 Public Playlists ● <span style="color: white">888 Followers ● 78 Following</span></p>
+                </div>
             </div>
         </div>
             <div v-show="showPlaylist">
