@@ -14,7 +14,7 @@ body {
     left: 0;
     position: fixed;
     background-color: #000000;
-    padding: 14px 30px;
+    padding: 1% 2%;
 }
 
 #topSettings {
@@ -103,6 +103,10 @@ body {
 .thunder78 img {
     width: 3rem;
     padding-right: 15px;
+}
+
+.top {
+    display: flex;
 }
 
 .titles {
@@ -209,25 +213,25 @@ body {
 #number {
     font-size: 1rem;
     color: #9A9A9A;
-    margin-left: 35px;
+    margin-left: 3%;
 }
 
 #title {
     font-size: 1rem;
     color: #9A9A9A;
-    margin-left: 40px;
+    margin-left: 13%;
 }
 
 #album {
     font-size: 1rem;
     color: #9A9A9A;
-    margin-left: 320px;
+    margin-left: 21%;
 }
 
 #dateAdded {
     font-size: 1rem;
     color: #9A9A9A;
-    margin-left: 273px;
+    margin-left: 25%;
 }
 
 .divider {
@@ -269,7 +273,7 @@ h1 {
 .songInfo {
     line-height: 1rem;
     position: absolute;
-    margin-left: 150px;
+    margin-left: 10%;
 }
 
 h2 {
@@ -304,11 +308,11 @@ p {
 }
 
 .album {
-    margin-left: 420px;
+    margin-left: 28%;
 }
 
 .date {
-    margin-left: 750px;
+    margin-left: 49.5%;
 }
 
 .time {
@@ -403,16 +407,16 @@ p {
 }
 
 #heart {
-    width: 1.5rem;
-    margin-left: 35px;
+    max-width: 1.5rem;
+    margin-left: 3%;
 }
 
 #progressBar {
-    width: 30rem;
-    margin-left: 175px;
+    max-width: 30rem;
+    margin-left: 10%;
 }
 
 #volume {
-    width: 15rem;
-    margin-left: 225px;
+    max-width: 15rem;
+    margin-left: 15%;
 }
