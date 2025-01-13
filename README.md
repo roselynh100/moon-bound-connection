@@ -10,9 +10,7 @@ View the actual playlist here: https://open.spotify.com/playlist/12GF3zySyMTd86a
 
 We first began with designing the website on Figma. Here, we decided which parts should be clickable, and got some help with the CSS values. This was my first time using Figma, so I was in the process of learning all the controls and features.
 
-![Image of Moon-Bound Connection Figma (Main Page)](https://media.discordapp.net/attachments/535232819853656114/889234180993613875/unknown.png?width=837&height=611)
-
-![Image of Moon-Bound Connection Figma (Song Descriptions)](https://media.discordapp.net/attachments/535232819853656114/889236414552748072/unknown.png)
+<img width="800" alt="Image of Moon-Bound Connection Figma (Main Page)" src="https://github.com/user-attachments/assets/040599f3-56bd-48f5-9d1d-ab7a8474f7fc" />
 
 Once that was done, I began building the website with only HTML and CSS, searching up my inquiries on the way. My original plan was to redirect to different HTML files every time a new page was to be shown. However, I then discovered Vue.js, and used that in my project instead!
 
